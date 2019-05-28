@@ -62,6 +62,42 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-summarize-html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/28/summarize-html/" class="article-date">
+  <time datetime="2019-05-28T03:04:23.000Z" itemprop="datePublished">2019-05-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/28/summarize-html/">summarize_html</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/28/summarize-html/" data-id="cjw77xpng0000g07auns1h4m9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vue-component" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/09/vue-component/" class="article-date">
@@ -87,12 +123,12 @@
         <blockquote>
 <p>子父之间传值传值</p>
 <ul>
-<li>在子组件标签中用一个自定义的数据名来接收父组件中的数据<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;child :message=<span class="string">'msg'</span>&gt;&lt;/child&gt;</span><br></pre></td></tr></table></figure>
+<li>在子组件标签中用一个自定义的数据名来接收父组件中的数据<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;child :message=<span class="string">'msg'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
 <ul>
-<li>在子组件实例中添加props用来存放父组件中传来的值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">props:[<span class="string">'自定义数据名'</span>]</span><br><span class="line"><span class="comment">// props是vue实例中的基础配置，配置时可以接数组，也可以为对象</span></span><br><span class="line">props: &#123;</span><br><span class="line">    message:&#123;</span><br><span class="line">        type: <span class="built_in">String</span>,<span class="comment">//这里是希望传入数据的类型</span></span><br><span class="line">        <span class="keyword">default</span>:<span class="number">111</span>,<span class="comment">//这里是数据没有传入时的默认值</span></span><br><span class="line">        required:<span class="literal">true</span>,<span class="comment">//是否必须传入</span></span><br><span class="line">        validator: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//这里是对传入的值进行验证</span></span><br><span class="line">        <span class="comment">// 这个值必须匹配下列字符串中的一个</span></span><br><span class="line">        <span class="keyword">return</span> [<span class="string">'success'</span>, <span class="string">'warning'</span>, <span class="string">'danger'</span>].indexOf(value) !== <span class="number">-1</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>在子组件实例中添加props用来存放父组件中传来的值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">props:[<span class="string">'自定义数据名'</span>]</span><br><span class="line"><span class="comment">// props是vue实例中的基础配置，配置时可以接数组，也可以为对象</span></span><br><span class="line">props: &#123;</span><br><span class="line">    message:&#123;</span><br><span class="line">        type: <span class="built_in">String</span>,<span class="comment">//这里是希望传入数据的类型</span></span><br><span class="line">        <span class="keyword">default</span>:<span class="number">111</span>,<span class="comment">//这里是数据没有传入时的默认值</span></span><br><span class="line">        required:<span class="literal">true</span>,<span class="comment">//是否必须传入</span></span><br><span class="line">        validator: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//这里是对传入的值进行验证</span></span><br><span class="line">        <span class="comment">// 这个值必须匹配下列字符串中的一个</span></span><br><span class="line">        <span class="keyword">return</span> [<span class="string">'success'</span>, <span class="string">'warning'</span>, <span class="string">'danger'</span>].indexOf(value) !== <span class="number">-1</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -127,7 +163,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/09/vue-component/" data-id="cjvgvrfem0000fg7asn7b7otc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/09/vue-component/" data-id="cjw77xppx0003g07a32z7sn4f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -173,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/07/vue/" data-id="cjvgvrffv0002fg7acrh9r4lr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/07/vue/" data-id="cjw77xppi0001g07al9yxtjmk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -218,7 +254,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/07/hello-world/" data-id="cjvgvrffs0001fg7acgq8h79q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/07/hello-world/" data-id="cjw77xppv0002g07ako90byqq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,6 +293,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/05/28/summarize-html/">summarize_html</a>
+          </li>
         
           <li>
             <a href="/2019/05/09/vue-component/">vue-component</a>
