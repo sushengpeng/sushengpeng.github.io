@@ -84,9 +84,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#<br>    总结html中的问题<br>#</p>
+        <h1 id="总结html中的问题"><a href="#总结html中的问题" class="headerlink" title="总结html中的问题"></a>总结html中的问题</h1><blockquote>
+<p><em>1</em>、 页面导入样式时，使用link和@import有什么区别</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">· link属于XHTML标签，除了加载CSS外还能用于定义Rss，定义rel连接属性等作用；而@import是Css提供的，只能用于加载Css</span><br><span class="line">· 页面被加载时，林可会同时被加载而@import引用的css会等到页面被加载完后被加载</span><br><span class="line">· link支持使用js控制DOM去改变样式，而@import不支持</span><br><span class="line"></span><br><span class="line">`</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>1、</p>
+<p><em>2</em>、常见的浏览器内核，以及兼容写法</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ie:trident -ms</span><br><span class="line">firefox:Gecko -moz</span><br><span class="line">safari:webkit -webkit</span><br><span class="line">chrome:blink -webkit</span><br><span class="line">opera: presto -o</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><em>3</em>、title 与 h1 的区别、b 与 strong 的区别、i 与 em 的区别？</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">· title属性没有明确的意义只是表示一个标题，而h1表示层次明确的标题，对SEO抓取页面有很大的影响，一个页面最好只有一个h1标题</span><br><span class="line">· strong和em都有强调文本的作用</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><em>3</em>、meta标签的作用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">· META标签的内容设计对于搜索引擎营销来说是至关重要的一个因素（description、keywords），seo优化</span><br><span class="line">· <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Refresh"</span> <span class="attr">content</span>=<span class="string">"n;url=http://yourlink"</span>&gt;</span><span class="comment">&lt;!-- 定时让网页在指定的时间n内，跳转到你的页面； --&gt;</span></span><br><span class="line">· <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=gb_2312-80"</span>&gt;</span>和<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Language"</span> <span class="attr">content</span>=<span class="string">"zh-CN"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 用以说明主页制作所使用的文字以及语言；又如英文是ISO-8859-1字符集，还有BIG5、utf-8、shift-Jis、Euc、Koi8-2等字符集 --&gt;</span></span><br><span class="line">· <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"set-cookie"</span> <span class="attr">content</span>=<span class="string">"Mon,12 May 2001 00:20:00 GMT"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- cookie设定，如果网页过期，存盘的cookie将被删除。需要注意的也是必须使用GMT时间格式； --&gt;</span></span><br><span class="line">· <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Pragma"</span> <span class="attr">content</span>=<span class="string">"no-cache"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 是用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出； --&gt;</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 
       
